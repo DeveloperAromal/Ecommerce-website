@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -116,7 +116,7 @@ export default function LoginForm() {
             </div>
             <div className="flex items-center justify-center">
               <p>
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link href="/auth/v1/signup">
                   <span className="text-blue-500">SignUp</span>
                 </Link>
