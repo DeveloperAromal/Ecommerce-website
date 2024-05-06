@@ -57,14 +57,14 @@ const Admin: React.FC = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="price" className="blocktext-black font-semibold mb-2">Price</label>
+            <label htmlFor="price" className="block text-black font-semibold mb-2">Price</label>
             <input
               id="price"
               type="text"
               placeholder="Enter price"
               value={price}
               onChange={handlePriceChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              className="w-full px-4 py-2 border text-black border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
             />
           </div>
           <button
