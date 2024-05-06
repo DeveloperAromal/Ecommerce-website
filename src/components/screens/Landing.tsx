@@ -180,15 +180,15 @@ const Landing: React.FC = () => {
                     alt="@"
                     width={100}
                     height={100}
-                    className="h-32 w-32 object-cover rounded-full"
+                    className="h-32 w-32 object-cover rounded-full product_image"
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-indigo-900 mb-2">
+                  <h3 className="text-lg font-semibold text-indigo-900 mb-2 title_tag">
                     {product.title}
                   </h3>
 
-                  <p className="text-gray-700">{product.price}</p>
+                  <p className="text-gray-700 price_tag">{product.price}</p>
                   <Link href={`/details/${product.id}`}>
                     <button
                       onClick={() => handleDetailsClick(product)}
