@@ -65,14 +65,14 @@ export default function ProductDetails({ params }: { params: { productid: string
             alt="@"
             width={200}
             height={200}
-            className="h-32 w-32 object-cover rounded-full"
+            className="h-32 w-32 object-cover rounded-full product_image"
           />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-indigo-900 mb-2">
+          <h3 className="text-lg font-semibold text-indigo-900 mb-2 title_tag">
             {product.title}
           </h3>
-          <p className="text-gray-700 mb-4">{product.price}</p>
+          <p className="text-gray-700 mb-4 price_tag">{product.price}</p>
           <button className="block w-full bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
             Add to Cart
           </button>
