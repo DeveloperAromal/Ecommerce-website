@@ -1,34 +1,34 @@
-import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
-import { NextResponse } from "next/server";
+// import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
+// import { NextResponse } from "next/server";
 
-import type { NextRequest } from "next/server";
-import type { Database } from "./src/lib/supabase/database.types";
+// import type { NextRequest } from "next/server";
+// import type { Database } from "./src/lib/supabase/database.types";
 
-export async function middleware(req: NextRequest) {
-  const res = NextResponse.next();
+// export async function middleware(req: NextRequest) {
+//   const res = NextResponse.next();
 
-  const supabase = createMiddlewareClient<Database>({ req, res });
+//   const supabase = createMiddlewareClient<Database>({ req, res });
 
-  try {
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    console.log(session);
-    const path = req.nextUrl.pathname;
+//   try {
+//     const {
+//       data: { session },
+//     } = await supabase.auth.getSession();
+//     console.log(session);
+//     const path = req.nextUrl.pathname;
 
-    const loginPath = "/auth/v1/login";
+//     const loginPath = "/auth/v1/login";
 
-    if (!session && path === "/admin") {
-      console.log("redirecting to login");
-      return NextResponse.redirect(new URL(loginPath, req.url));
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
+//     if (!session && path === "/admin") {
+//       console.log("redirecting to login");
+//       return NextResponse.redirect(new URL(loginPath, req.url));
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
 
-  return res;
-}
+//   return res;
+// }
 
-export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
-};
+// export const config = {
+//   matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+// };
