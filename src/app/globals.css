@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+.shad{
+  box-shadow: 0px 0px 30px#05a57d ;
+}
+::-webkit-scrollbar{
+  width: 1px;
+}
