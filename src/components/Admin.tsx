@@ -17,7 +17,7 @@ const Admin: React.FC = () => {
     event.preventDefault();
     try {
       const { data, error: updateError } = await supabase
-        .from("Pricehawk_Database")
+        .from("Ecommerce")
         .update({ price })
         .eq("id", id);
 
