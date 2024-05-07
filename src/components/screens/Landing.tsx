@@ -126,7 +126,7 @@ const Landing: React.FC = () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
-        .from("Pricehawk_Database")
+        .from("Ecommerce")
         .select("*");
 
       if (error) {
