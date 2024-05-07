@@ -184,11 +184,11 @@ const Landing: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <div className="text-lg font-semibold text-indigo-900 mb-2 title_tag title-detail">
+                  <div className="title_tag title-detail">
                     {product.title}
                   </div>
 
-                  <div className="text-gray-700 price_tag price-detail">{product.price}</div>
+                  <div className="price_tag price-detail">{product.price}</div>
                   <Link href={`/details/${product.id}`}>
                     <button
                       onClick={() => handleDetailsClick(product)}

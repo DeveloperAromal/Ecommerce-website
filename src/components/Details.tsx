@@ -39,8 +39,8 @@ const Details: React.FC = () => {
         {productDetails.image && (
           <Image src={productDetails.image} alt={productDetails.title} className="rounded-lg mb-2 product_image image-detail" />
         )}
-        <div className="text-lg font-semibold mb-2 title_tag title-detail">{productDetails.title}</div>
-        <div className="text-gray-700 price_tag price-detail">{productDetails.price}</div>
+        <div className="title_tag title-detail">{productDetails.title}</div>
+        <div className="price_tag price-detail">{productDetails.price}</div>
       </div>
     </section>
   );
