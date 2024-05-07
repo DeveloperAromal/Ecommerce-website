@@ -24,7 +24,7 @@ export default function ProductDetails({ params }: { params: { productid: string
       try {
         setLoading(true);
         const { data, error } = await supabase
-          .from("Pricehawk_Database")
+          .from("Ecommerce")
           .select("*")
           .eq("id", parseInt(productid)) // Fetching item with the provided product ID
           .single();
@@ -65,11 +65,11 @@ export default function ProductDetails({ params }: { params: { productid: string
             alt="@"
             width={200}
             height={200}
-            className="h-32 w-32 object-cover rounded-full product_image"
+            className="h-32 w-32 object-cover rounded-full product_image image-detail"
           />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-indigo-900 mb-2 title_tag">
+          <h3 className="text-lg font-semibold text-indigo-900 mb-2 title_tag title-detail">
             {product.title}
           </h3>
           <p className="text-gray-700 mb-4 price_tag">{product.price}</p>
