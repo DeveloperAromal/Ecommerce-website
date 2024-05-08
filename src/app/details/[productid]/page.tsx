@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import Image from "next/image";
 
@@ -8,7 +8,11 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export default function ProductDetails({ params }: { params: { productid: string } }) {
+export default function ProductDetails({
+  params,
+}: {
+  params: { productid: string };
+}) {
   const { productid } = params;
   const [product, setProduct] = useState<{
     id: number;
@@ -69,10 +73,14 @@ export default function ProductDetails({ params }: { params: { productid: string
           />
         </div>
         <div>
-          <div className="title_tag title-detail">
-            {product.title}
-          </div>
-          <div className="price_tag price-detail">{product.price}</div>
+          <h1>
+            <span className="title_tag title-detail">{product.title}</span>
+          </h1>
+
+          <h1>
+            {" "}
+            <span className="price_tag price-detail">{product.price}</span>
+          </h1>
           <button className="block w-full bg-indigo-600 text-white text-center py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
             Add to Cart
           </button>

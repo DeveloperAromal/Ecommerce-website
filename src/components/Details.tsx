@@ -39,8 +39,18 @@ const Details: React.FC = () => {
         {productDetails.image && (
           <Image src={productDetails.image} alt={productDetails.title} className="rounded-lg mb-2 product_image image-detail" />
         )}
-        <div className="title_tag title-detail">{productDetails.title}</div>
-        <div className="price_tag price-detail">{productDetails.price}</div>
+         <h1>
+                    <span className="title_tag title-detail">
+                      {productDetails.title}
+                    </span>
+                  </h1>
+
+                  <h1>
+                    {" "}
+                    <span className="price_tag price-detail">
+                      {productDetails.price}
+                    </span>
+                  </h1>
       </div>
     </section>
   );
