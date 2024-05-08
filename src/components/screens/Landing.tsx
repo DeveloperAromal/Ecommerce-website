@@ -86,13 +86,13 @@ const Landing: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <h1>
+                  <h1  id="product-details">
                     <span className="title_tag title-detail">
                       {product.title}
                     </span>
                   </h1>
 
-                  <h1>
+                  <h1 id="price-details">
                     {" "}
                     <span className="price_tag price-detail">
                       {product.price}
