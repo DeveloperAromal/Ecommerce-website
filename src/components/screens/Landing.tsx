@@ -222,7 +222,6 @@ const Landing: React.FC = () => {
               height={200}
               className="object-cover"
             />
-            {/* Add other details */}
           </div>
         </Modal>
       )}
